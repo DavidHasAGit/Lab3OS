@@ -1,8 +1,8 @@
-package droids;
+package droid;
 
 public abstract class DroidBlueprint {
-    String name;
-    double health;
+    protected String name;
+    protected double health;
     public abstract double getDamage(DroidBlueprint opponent);
 
     public abstract String[] getDroidLook();

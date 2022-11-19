@@ -1,4 +1,4 @@
-package droids;
+package droid;
 
 public class D2 extends DroidBlueprint {
     public D2() {

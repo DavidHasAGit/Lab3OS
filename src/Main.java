@@ -1,17 +1,12 @@
-package starter;
-
 import java.util.Scanner;
 
-import battles.Battle1v1;
-import battles.Battle1v1Plus;
-import battles.Battle2v2;
-import battles.Battle2v2Plus;
-import droids.D1;
-import droids.D2;
-import droids.D3;
-import droids.D4;
+import battle.Battle1v1;
+import battle.Battle1v1Plus;
+import battle.Battle2v2;
+import battle.Battle2v2Plus;
+import droid.*;
 
-public class start {
+public class Main {
     public static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
         while (true){
@@ -44,24 +39,21 @@ public class start {
                     break;
                 case 6:
                     return;
-            default:
-                System.out.println("There is no such choice");
+                default:
+                    System.out.println("There is no such choice");
             }
         }
     }
     public static void showDroids(){
-        D1 d1 = new D1();
-        D2 d2 = new D2();
-        D3 d3 = new D3();
-        D4 d4 = new D4();
+        DroidBlueprint[] dr = new DroidBlueprint[4];
+        dr[0] = new D1();
+        dr[1] = new D2();
+        dr[2] = new D3();
+        dr[3] = new D4();
 
-        System.out.println(d1);
-        System.out.println("\n");
-        System.out.println(d2);
-        System.out.println("\n");
-        System.out.println(d3);
-        System.out.println("\n");
-        System.out.println(d4);
-        System.out.println("\n");
+        for (DroidBlueprint i : dr) {
+            System.out.println(i);
+            System.out.println("\n");
+        }
     }
 }

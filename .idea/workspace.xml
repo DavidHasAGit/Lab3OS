@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbeaf900-00e5-4c46-a2de-aeeda4818fa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DroidsBattle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/battles/Battle1v1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/battles/Battle1v1Blueprint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/battles/Battle1v1Plus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/battles/Battle2v2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/battles/Battle2v2Blueprint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/battles/Battle2v2Plus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/battles/BattleBlueprint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/droids/D1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/droids/D2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/droids/D3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/droids/D4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/droids/DroidBlueprint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/starter/start.java" afterDir="false" />
+    <list default="true" id="dbeaf900-00e5-4c46-a2de-aeeda4818fa7" name="Changes" comment="project done">
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/battles/Battle1v1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/battles/Battle1v1Blueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/battle/Battle1v1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/battles/Battle1v1Plus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/battle/Battle1v1Plus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/battles/Battle2v2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/battles/Battle2v2Blueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/battle/Battle2v2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/battles/Battle2v2Plus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/battle/Battle2v2Plus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/battles/BattleBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/battle/BattleBlueprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/droids/D1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/droid/D1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/droids/D2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/droid/D2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/droids/D3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/droid/D3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/droids/D4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/droid/D4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/droids/DroidBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/droid/DroidBlueprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/start.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +46,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/DroidsBattle&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
@@ -62,6 +59,14 @@
       <option name="presentableId" value="Default" />
       <updated>1663697702735</updated>
     </task>
+    <task id="LOCAL-00001" summary="project done">
+      <created>1664757358415</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664757358415</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,5 +79,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project done" />
+    <option name="LAST_COMMIT_MESSAGE" value="project done" />
   </component>
 </project>

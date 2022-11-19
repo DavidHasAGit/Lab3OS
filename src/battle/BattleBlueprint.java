@@ -1,4 +1,6 @@
-package battles;
+package battle;
+
+import droid.DroidBlueprint;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -40,5 +42,18 @@ public class BattleBlueprint {
             if (d1Object == d2Object) continue;
             return (d1Object == 0 && d2Object == 1) || (d1Object == 1 && d2Object == 2) || (d1Object == 2 && d2Object == 0);
         }
+    }
+    protected void showMove(DroidBlueprint attacker, DroidBlueprint defender) {
+        String[] drawDroid1 = attacker.getDroidLook();
+        String[] drawDroid2 = defender.getDroidLook();
+        String[] droidHit = {"  ,     ", "+=(====>", "  '     "};
+        System.out.println();
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println(drawDroid1[i] + "\t" + droidHit[i] + "\t" + drawDroid2[i]);
+        }
+        System.out.println(attacker);
+        System.out.println(defender);
+        System.out.println();
     }
 }

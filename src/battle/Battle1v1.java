@@ -1,55 +1,44 @@
-package battles;
+package battle;
 
-import droids.*;
+import droid.*;
 
-public abstract class Battle1v1Blueprint extends BattleBlueprint {
-    DroidBlueprint droid1, droid2;
+public class Battle1v1 extends BattleBlueprint {
+    DroidBlueprint[] droids = new DroidBlueprint[2];
     private void setDroid(int dNum, int dOrder) {
         switch (dNum) {
-            case 1:
-                if (dOrder == 1) this.droid1 = new D1();
-                else this.droid2 = new D1();
-                break;
-            case 2:
-                if (dOrder == 1) this.droid1 = new D2();
-                else this.droid2 = new D2();
-                break;
-            case 3:
-                if (dOrder == 1) this.droid1 = new D3();
-                else this.droid2 = new D3();
-                break;
-            case 4:
-                if (dOrder == 1) this.droid1 = new D4();
-                else this.droid2 = new D4();
-                break;
+            case 1 -> this.droids[dOrder] = new D1();
+            case 2 -> this.droids[dOrder] = new D2();
+            case 3 -> this.droids[dOrder] = new D3();
+            case 4 -> this.droids[dOrder] = new D4();
         }
     }
     private void chooseDroid() {
-        D1 d1 = new D1();
-        D2 d2 = new D2();
-        D3 d3 = new D3();
-        D4 d4 = new D4();
+        DroidBlueprint[] dr = new DroidBlueprint[4];
+        dr[0] = new D1();
+        dr[1] = new D2();
+        dr[2] = new D3();
+        dr[3] = new D4();
 
         System.out.println("       #");
         System.out.println("      ##");
         System.out.println("     # #");
         System.out.println("       #");
-        System.out.println(d1 + "\n");
+        System.out.println(dr[0] + "\n");
         System.out.println("     ###");
         System.out.println("    #  #");
         System.out.println("      # ");
         System.out.println("     ###");
-        System.out.println(d2 + "\n");
+        System.out.println(dr[1] + "\n");
         System.out.println("    ####");
         System.out.println("      # ");
         System.out.println("       #");
         System.out.println("     ###");
-        System.out.println(d3 + "\n");
+        System.out.println(dr[2] + "\n");
         System.out.println("    #   #");
         System.out.println("    #   #");
         System.out.println("    #####");
         System.out.println("        #");
-        System.out.println(d4 + "\n");
+        System.out.println(dr[3] + "\n");
 
         System.out.print("Choose first droid(the order does not matter): ");
         int choice1 = scan.nextInt();
@@ -57,7 +46,7 @@ public abstract class Battle1v1Blueprint extends BattleBlueprint {
             System.out.print("Invalid input. Try again: ");
             choice1 = scan.nextInt();
         }
-        setDroid(choice1, 1);
+        setDroid(choice1, 0);
 
         System.out.print("Choose second droid(droids cannot be repeated): ");
         int choice2 = scan.nextInt();
@@ -65,7 +54,7 @@ public abstract class Battle1v1Blueprint extends BattleBlueprint {
             System.out.print("Invalid input. Try again: ");
             choice2 = scan.nextInt();
         }
-        setDroid(choice2, 2);
+        setDroid(choice2, 1);
     }
     private void congratulation(DroidBlueprint winner, DroidBlueprint loser) {
         System.out.println("#   #   #   #  #    #  #    ####    ###    ");
@@ -84,7 +73,9 @@ public abstract class Battle1v1Blueprint extends BattleBlueprint {
 
         System.out.println("\n" + loser + "\n");
     }
-    protected abstract void move(DroidBlueprint attacker, DroidBlueprint defender);
+    protected void move(DroidBlueprint attacker, DroidBlueprint defender) {
+        defender.setHealth(defender.getHealth() - attacker.getDamage(defender));
+    }
     private boolean gameEnd(DroidBlueprint attacker, double attackerHealth, DroidBlueprint defender, double defenderHealth) {
         if(defender.getHealth() <= 0) {
             defender.setHealth(0);
@@ -102,21 +93,23 @@ public abstract class Battle1v1Blueprint extends BattleBlueprint {
         while(true) {
             System.out.println("HIT " + i++ + "!!!");
             move(firstDroid, secondDroid);
+            showMove(firstDroid, secondDroid);
             if (gameEnd(firstDroid, firstDroidHealth, secondDroid, secondDroidHealth)) break;
 
             System.out.println("HIT " + i++ + "!!!");
             move(secondDroid, firstDroid);
+            showMove(secondDroid, firstDroid);
             if (gameEnd(secondDroid, secondDroidHealth, firstDroid, firstDroidHealth)) break;
         }
     }
     public void battle() {
         chooseDroid();
         if (firstDroidStarts()) {
-            System.out.println("\t" + droid1.getName() + " STARTS!!!\n");
-            fight(droid1, droid2);
+            System.out.println("\t" + droids[0].getName() + " STARTS!!!\n");
+            fight(droids[0], droids[1]);
         } else {
-            System.out.println("\t" + droid2.getName() + " STARTS!!!\n");
-            fight(droid2, droid1);
+            System.out.println("\t" + droids[1].getName() + " STARTS!!!\n");
+            fight(droids[1], droids[0]);
         }
     }
 }

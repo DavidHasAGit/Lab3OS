@@ -1,4 +1,4 @@
-package droids;
+package droid;
 
 import java.util.Random;
 

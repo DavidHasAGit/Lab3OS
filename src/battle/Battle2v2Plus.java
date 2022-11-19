@@ -1,10 +1,10 @@
-package battles;
+package battle;
 
-import droids.*;
+import droid.*;
 
 import java.util.Random;
 
-public class Battle1v1Plus extends Battle1v1Blueprint {
+public class Battle2v2Plus extends Battle2v2 {
     public static Random rand = new Random();
     private double getRandomAbility() {
         double ability = rand.nextDouble();
@@ -41,16 +41,5 @@ public class Battle1v1Plus extends Battle1v1Blueprint {
         else {
             System.out.println(attacker.getName() + " got tired and missed the move");
         }
-        String[] drawDroid1 = attacker.getDroidLook();
-        String[] drawDroid2 = defender.getDroidLook();
-        String[] droidHit = {"  ,     ", "+=(====>", "  '     "};
-        System.out.println();
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println(drawDroid1[i] + "\t" + droidHit[i] + "\t" + drawDroid2[i]);
-        }
-        System.out.println(attacker);
-        System.out.println(defender);
-        System.out.println();
     }
 }
